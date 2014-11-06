@@ -54,8 +54,8 @@ kvm upgrade [-X86][-Amd64] [-r|-Runtime CLR|CoreCLR] [-g|-Global] [-f|-Force] [-
   install latest KRE from feed
   set 'default' alias to installed version
   add KRE bin to user PATH environment variable
-  -g|-Global        install to machine-wide location
-  -f|-Force         upgrade even if latest is already installed
+  -g|--Global        install to machine-wide location
+  -f|--Force         upgrade even if latest is already installed
   -Proxy <ADDRESS>  use given address as proxy when accessing remote server
   -NoNative         Do not generate native images (Effective only for CoreCLR flavors)
 
@@ -64,10 +64,10 @@ kvm install <semver>|<alias>|<nupkg>|latest [-X86][-Amd64] [-r|-Runtime CLR|Core
   <nupkg>           install requested KRE from package on local filesystem
   latest            install latest KRE from feed
   add KRE bin to path of current command line
-  -p|-Persistent    add KRE bin to PATH environment variables persistently
-  -a|-Alias <alias> set alias <alias> for requested KRE on install
-  -g|-Global        install to machine-wide location
-  -f|-Force         install even if specified version is already installed
+  -p|--Persistent    add KRE bin to PATH environment variables persistently
+  -a|--Alias <alias> set alias <alias> for requested KRE on install
+  -g|--Global        install to machine-wide location
+  -f|--Force         install even if specified version is already installed
   -NoNative         Do not generate native images (Effective only for CoreCLR flavors)
 
 kvm use <semver>|<alias>|none [-X86][-Amd64] [-r|-Runtime CLR|CoreCLR] [-p|-Persistent] [-g|-Global]

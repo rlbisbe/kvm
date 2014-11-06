@@ -157,18 +157,18 @@ kvm()
             echo "add KRE bin to path of current command line"
             echo "set installed version as default"
             echo ""
-            echo "kvm install <semver>|<alias>|<nupkg>|latest [-a|-alias <alias>] [-p -persistent]"
+            echo "kvm install <semver>|<alias>|<nupkg>|latest [-a|--alias <alias>] [-p --persistent]"
             echo "<semver>|<alias>  install requested KRE from feed"
             echo "<nupkg>           install requested KRE from local package on filesystem"
             echo "latest            install latest version of KRE from feed"
-            echo "-a|-alias <alias> set alias <alias> for requested KRE on install"
-            echo "-p -persistent    set installed version as default"
+            echo "-a|--alias <alias> set alias <alias> for requested KRE on install"
+            echo "-p --persistent    set installed version as default"
             echo "add KRE bin to path of current command line"
             echo ""
-            echo "kvm use <semver>|<alias>|none [-p -persistent]"
+            echo "kvm use <semver>|<alias>|none [-p --persistent]"
             echo "<semver>|<alias>  add KRE bin to path of current command line   "
             echo "none              remove KRE bin from path of current command line"
-            echo "-p -persistent    set selected version as default"
+            echo "-p --persistent    set selected version as default"
             echo ""
             echo "kvm list"
             echo "list KRE versions installed "
@@ -201,9 +201,9 @@ kvm()
             local alias=
             while [ $# -ne 0 ]
             do
-                if [[ $1 == "-p" || $1 == "-persistant" ]]; then
+                if [[ $1 == "-p" || $1 == "--persistent" ]]; then
                     local persistent="-p"
-                elif [[ $1 == "-a" || $1 == "-alias" ]]; then
+                elif [[ $1 == "-a" || $1 == "--alias" ]]; then
                     local alias=$2
                     shift
                 elif [[ -n $1 ]]; then
@@ -252,7 +252,7 @@ kvm()
             local persistent=
             while [ $# -ne 0 ]
             do
-                if [[ $1 == "-p" || $1 == "-persistent" ]]; then
+                if [[ $1 == "-p" || $1 == "--persistent" ]]; then
                     local persistent="true"
                 elif [[ -n $1 ]]; then
                     local versionOrAlias=$1
